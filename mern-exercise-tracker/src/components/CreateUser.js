@@ -25,7 +25,7 @@ export default class CreateUser extends Component {
       username: this.state.username
     }
 
-    axios.post('http://localhost:5000/users/add', user)
+    axios.post('https://exercise-tracker-autodeploy.herokuapp.com/add', user)
       .then(res => console.log(res.data));
     
     this.setState({

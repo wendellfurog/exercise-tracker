@@ -20,6 +20,10 @@ connection.once('open', () => {
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 
+app.get("/", (req, res) =>{
+  res.json('server start')
+})
+
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 
